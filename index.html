@@ -5,68 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automated Deployment of Static Web Application using GitHub Actions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Automated Deployment of Static Web Application</h1>
-            <p>using GitHub Actions</p>
-            <p class="subtitle">A DevOps College Project by Team <strong>Techies</strong></p>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i> DevOps Deploy
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#technologies" class="nav-link">Tech Stack</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="darkModeBtn" class="theme-toggle" title="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Automated Deployment Platform</h1>
+            <p>CI/CD Pipeline using GitHub Actions</p>
+            <div class="hero-subtitle">
+                <p>A Modern DevOps Solution by Team <strong>Techies</strong></p>
+            </div>
+            <button class="cta-btn" onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+                Learn More <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="hero-background"></div>
     </header>
 
     <main class="container">
-        <!-- Home Section -->
-        <section id="home">
-            <h2>Project Description</h2>
-            <p>This project demonstrates the automated deployment of a static web application using GitHub Actions. It implements a CI/CD pipeline to automatically build and deploy the website whenever changes are pushed to the repository. The website showcases team details, roles, and contributions.</p>
+        <!-- Home/Description Section -->
+        <section id="home" class="section-padding">
+            <h2>Project Overview</h2>
+            <div class="overview-content">
+                <p>This project demonstrates a professional-grade automated deployment system for static web applications using GitHub Actions. Our CI/CD pipeline automates the entire workflow from code commit to live deployment on GitHub Pages.</p>
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Automated Testing</h4>
+                        <p>Automatic code validation on every push</p>
+                    </div>
+                    <div class="overview-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Instant Deployment</h4>
+                        <p>Zero-downtime deployments to production</p>
+                    </div>
+                    <div class="overview-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Security First</h4>
+                        <p>Automated security checks and validations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="stats" class="stats-section">
+            <h2>Project Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <p>Deployments</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="99.9">0</div>
+                    <p>Uptime %</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="4">0</div>
+                    <p>Team Members</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="0">0</div>
+                    <p>Issues</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section-padding">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Version Control</h3>
+                    <p>Seamless Git & GitHub integration for code management</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automation</h3>
+                    <p>GitHub Actions automates your entire workflow</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Hosting</h3>
+                    <p>Direct deployment to GitHub Pages</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Continuous Integration and Deployment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance</h3>
+                    <p>Lightning-fast builds and deployments</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Security</h3>
+                    <p>Enterprise-grade security protocols</p>
+                </div>
+            </div>
         </section>
 
         <!-- Tools/Technologies -->
-        <section id="technologies">
+        <section id="technologies" class="section-padding">
             <h2>Tools & Technologies</h2>
-            <ul class="tech-list">
-                <li><span>Frontend:</span> HTML, CSS</li>
-                <li><span>Version Control:</span> Git & GitHub</li>
-                <li><span>CI/CD:</span> GitHub Actions</li>
-                <li><span>Hosting:</span> GitHub Pages</li>
-            </ul>
+            <div class="tech-container">
+                <div class="tech-category">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <ul class="tech-list">
+                        <li><span>HTML5</span> - Semantic Markup</li>
+                        <li><span>CSS3</span> - Modern Styling</li>
+                        <li><span>JavaScript</span> - Interactivity</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3><i class="fas fa-server"></i> Backend & DevOps</h3>
+                    <ul class="tech-list">
+                        <li><span>Git & GitHub</span> - Version Control</li>
+                        <li><span>GitHub Actions</span> - CI/CD</li>
+                        <li><span>GitHub Pages</span> - Hosting</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Team Members & Contributions -->
-        <section id="team">
-            <h2>Team Members & Contributions</h2>
-            <div class="team-grid">
+        <section id="team" class="section-padding">
+            <h2>Meet Our Team</h2>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="teamSearch" placeholder="Search team members...">
+            </div>
+            <div class="team-grid" id="teamGrid">
                 <div class="team-member">
-                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
                     <h3>Maruti</h3>
                     <p class="role">Backend Developer</p>
                     <p class="contribution">Backend development and API handling</p>
+                    <div class="team-social">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
                     <h3>Adesh</h3>
                     <p class="role">UI/UX & Frontend Developer</p>
                     <p class="contribution">UI design and frontend implementation</p>
+                    <div class="team-social">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
                     <h3>Disha</h3>
                     <p class="role">DevOps Engineer</p>
                     <p class="contribution">CI/CD pipeline setup using GitHub Actions</p>
+                    <div class="team-social">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="team-member">
-                    <div class="photo-placeholder"></div>
+                    <div class="photo-placeholder">
+                        <i class="fas fa-user-check"></i>
+                    </div>
                     <h3>Ritu</h3>
-                    <p class="role">Tester</p>
+                    <p class="role">Tester & QA Lead</p>
                     <p class="contribution">Testing and documentation</p>
+                    <div class="team-social">
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email us at: <strong>techies@devops.com</strong></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Based in: <strong>India</strong></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-github"></i>
+                        <p>GitHub: <strong>MarutiHaval05</strong></p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <footer>
-        <p>&copy; 2026 Team Techies - DevOps Project</p>
+        <p>&copy; 2026 Team Techies - DevOps Project. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
